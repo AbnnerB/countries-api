@@ -25,6 +25,14 @@
   color: inherit;
   font-weight: 500;
 }
+.headerSearch select {
+  padding: 1rem;
+  border-radius: 10px;
+  outline: none;
+}
+.headerSearch select option {
+  border-radius: 10px;
+}
 
 .containerCountries {
   max-width: 80%;

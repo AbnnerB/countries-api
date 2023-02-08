@@ -37,7 +37,7 @@ function Home() {
           />
         </div>
         <select onClick={(e) => setValueSelect(e.target.value)}>
-          <option selected disabled hidden>
+          <option value={"Americas"} selected disabled>
             Filter by region
           </option>
           <option value={"Africa"}>Africa</option>
