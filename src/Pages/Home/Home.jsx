@@ -36,8 +36,15 @@ function Home() {
             style={{ backgroundColor: darkMode === "darkMode" ? "" : "white" }}
           />
         </div>
-        <select onClick={(e) => setValueSelect(e.target.value)}>
-          <option value={"Americas"} selected disabled>
+        <select
+          style={{
+            backgroundColor:
+              darkMode === "darkMode" ? "hsl(209, 23%, 22%)" : "",
+            color: darkMode === "darkMode" ? "white" : "hsl(209, 23%, 22%)",
+          }}
+          onClick={(e) => setValueSelect(e.target.value)}
+        >
+          <option defaultValue={"Americas"} disabled>
             Filter by region
           </option>
           <option value={"Africa"}>Africa</option>

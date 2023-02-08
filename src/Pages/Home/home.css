@@ -27,10 +27,13 @@
 }
 .headerSearch select {
   padding: 1rem;
-  border-radius: 10px;
+  border-radius: 6px;
   outline: none;
+  border: none;
+  border-right: 20px solid hsl(209, 23%, 22%);
 }
 .headerSearch select option {
+  border-bottom: 2px solid white;
   border-radius: 10px;
 }
 
