@@ -6,6 +6,26 @@
   padding-top: 2.5rem;
 }
 
+.inputAndSearch {
+  position: relative;
+}
+
+.search {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+}
+
+.headerSearch input {
+  background-color: hsl(209, 23%, 22%);
+  padding: 0.8rem 3rem;
+  border: none;
+  box-shadow: 2px 1px 6px rgb(41, 40, 40);
+  outline: none;
+  color: inherit;
+  font-weight: 500;
+}
+
 .containerCountries {
   max-width: 80%;
   margin: 2rem auto 0 auto;
