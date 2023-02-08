@@ -15,6 +15,7 @@ function Home() {
   const { darkMode } = useModeContext();
 
   const [valueInputTextSearch, setValueInputTextSearch] = useState("");
+  const [valueSelect, setValueSelect] = useState("Americas");
 
   function linkNavigate(code) {
     navigate(`details/${code}`);
@@ -35,18 +36,20 @@ function Home() {
             style={{ backgroundColor: darkMode === "darkMode" ? "" : "white" }}
           />
         </div>
-        <select>
-          <option value="">Filter by region</option>
-          <option value="">Africa</option>
-          <option value="">America</option>
-          <option value="">Asia</option>
-          <option value="">Europe</option>
-          <option value="">Oceania</option>
+        <select onClick={(e) => setValueSelect(e.target.value)}>
+          <option selected disabled hidden>
+            Filter by region
+          </option>
+          <option value={"Africa"}>Africa</option>
+          <option value={"Americas"}>America</option>
+          <option value={"Asia"}>Asia</option>
+          <option value={"Europe"}>Europe</option>
+          <option value={"Oceania"}>Oceania</option>
         </select>
       </div>
       {valueInputTextSearch.length === 0 ? (
         <section className="containerCountries">
-          {Data.filter((c) => c.region === "Africa").map((item, index) => {
+          {Data.filter((c) => c.region === valueSelect).map((item, index) => {
             const population = item.population.toLocaleString("pt-br");
 
             return (
