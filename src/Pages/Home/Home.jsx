@@ -2,21 +2,24 @@ import Data from "../../Data/data.json";
 import "./home.css";
 
 import { useNavigate } from "react-router-dom";
+import useModeContext from "../../hook/useModeContext";
 
 // const top20 = Data.slice(0, 10);
 
 function Home() {
   const navigate = useNavigate();
+  const { darkMode } = useModeContext();
 
   function linkNavigate(code) {
     navigate(`details/${code}`);
   }
 
   return (
-    <div className="Home">
+    <main className={darkMode} style={{ minHeight: "100vh" }}>
       <div className="headerSearch">
         <input type="text" name="" id="" />
         <select>
+          <option value="">Filter by region</option>
           <option value="">Africa</option>
           <option value="">America</option>
           <option value="">Asia</option>
@@ -45,7 +48,7 @@ function Home() {
           );
         })}
       </section>
-    </div>
+    </main>
   );
 }
 

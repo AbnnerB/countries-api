@@ -1,16 +1,18 @@
 .headerSearch {
   max-width: 80%;
-  margin: 2rem auto 0 auto;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
 }
 
 .containerCountries {
   max-width: 80%;
-  margin: 2rem auto 2rem auto;
+  margin: 2rem auto 0 auto;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  flex-wrap: wrap;
+  grid-template-columns: repeat(auto-fill, 230px);
   gap: 3rem;
+  padding-bottom: 3rem;
 }
 
 .card {
@@ -23,6 +25,6 @@
 .card img {
   width: 100%;
 }
-.apiContentInfo {
+.card .apiContentInfo {
   padding: 1rem;
 }
