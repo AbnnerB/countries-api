@@ -84,7 +84,9 @@ function Home() {
             (country) =>
               country.name.toLowerCase() ===
                 valueInputTextSearch.toLowerCase() ||
-              country.alpha2Code === valueInputTextSearch.toUpperCase()
+              country.alpha2Code === valueInputTextSearch.toUpperCase() ||
+              country.nativeName.toUpperCase() ===
+                valueInputTextSearch.toUpperCase()
           ).map((item, index) => {
             const population = item.population.toLocaleString("pt-br");
 
