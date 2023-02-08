@@ -5,6 +5,7 @@ import Details from "./Pages/Details/Details";
 import HeaderMode from "./components/HeaderMode";
 import ModeProvider from "./context/ModeProvider";
 import { useState } from "react";
+import FooterAllPage from "./components/FooterAllPage";
 
 function App() {
   const [darkMode, setDarkMode] = useState(
@@ -12,15 +13,14 @@ function App() {
   );
   return (
     <ModeProvider>
-      <div className="app">
-        <HeaderMode />
-        <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/details/:id" element={<Details />} />
-          </Routes>
-        </BrowserRouter>
-      </div>
+      <HeaderMode />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/details/:id" element={<Details />} />
+        </Routes>
+      </BrowserRouter>
+      <FooterAllPage />
     </ModeProvider>
   );
 }

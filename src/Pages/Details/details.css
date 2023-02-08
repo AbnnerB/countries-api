@@ -1,8 +1,25 @@
 .containerDetailsPage {
   max-width: 80%;
-  margin: 1rem auto;
+  margin: 0 auto;
+  min-height: 100vh;
 }
 
+.linkBack {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  border-radius: 4px;
+  max-width: 100px;
+  padding: 0.3rem 1rem;
+  box-shadow: 2px 2px 10px rgb(46, 46, 46);
+  background-color: hsl(209, 23%, 22%);
+}
+.linkBack svg {
+  font-size: 1.5rem;
+}
 .containerDetails {
   margin-top: 3rem;
   display: flex;
@@ -15,7 +32,6 @@
 }
 
 .firstDivIntoContainer img {
-  /* max-height: 400px; */
   max-width: 500px;
   min-width: 200px;
   box-shadow: 2px 2px 10px rgb(122, 122, 122);

@@ -5,10 +5,6 @@
   font-family: "Ubuntu", sans-serif;
 }
 
-#root {
-  background-color: wheat;
-}
-
 .headerAllPage {
   max-width: 80%;
   margin: 0 auto;

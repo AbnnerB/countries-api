@@ -6,6 +6,8 @@ import Data from "../../Data/data.json";
 
 import useModeContext from "../../hook/useModeContext";
 
+import { BsArrowLeftShort } from "react-icons/bs";
+
 export default function Details() {
   const { darkMode, setDarkMode } = useModeContext();
 
@@ -14,7 +16,9 @@ export default function Details() {
   return (
     <main className={darkMode}>
       <section className="containerDetailsPage">
-        <Link to="/">Back</Link>
+        <Link className="linkBack" to="/">
+          <BsArrowLeftShort /> Back
+        </Link>
 
         {/*  */}
 
