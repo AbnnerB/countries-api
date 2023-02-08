@@ -35,9 +35,21 @@ function Home() {
             <div
               key={index}
               className="card"
+              style={{
+                backgroundColor: darkMode === "lightMode" ? "white" : "",
+              }}
               onClick={() => linkNavigate(item.numericCode)}
             >
-              <img src={item.flags.svg} alt="Flags" />
+              <img
+                style={{
+                  borderBottom:
+                    darkMode === "lightMode"
+                      ? "1px solid rgb(214, 214, 214)"
+                      : "",
+                }}
+                src={item.flags.svg}
+                alt="Flags"
+              />
               <div className="apiContentInfo">
                 <h2>{item.name}</h2>
                 <p>Population: {population}</p>

@@ -1,3 +1,4 @@
+import "./headerStyle.css";
 import { BsMoon, BsMoonFill } from "react-icons/bs";
 
 import useModeContext from "../hook/useModeContext";
@@ -13,10 +14,16 @@ export default function HeaderMode() {
     }
   }
 
+  // className={
+  //   darkMode === "lightMode" ? "headerAllPage" : "headerAllPageDark"
+  // }
   return (
-    <div className={darkMode}>
+    <div
+      className={darkMode === "darkMode" ? "headerAllPageDark" : ""}
+      style={{ boxShadow: darkMode === "darkMode" ? "" : "2px 2px 4px gray" }}
+    >
       <div className="headerAllPage">
-        <h2>Where is the world</h2>
+        <h2>Where is the world?</h2>
         <button onClick={altMode}>
           {darkMode === "darkMode" ? (
             <BsMoonFill className="moonFil" />

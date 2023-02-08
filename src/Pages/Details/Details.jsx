@@ -16,11 +16,15 @@ export default function Details() {
   return (
     <main className={darkMode}>
       <section className="containerDetailsPage">
-        <Link className="linkBack" to="/">
+        <Link
+          className="linkBack"
+          to="/"
+          style={{
+            backgroundColor: darkMode === "darkMode" ? "" : "white",
+          }}
+        >
           <BsArrowLeftShort /> Back
         </Link>
-
-        {/*  */}
 
         {Data.filter((code) => code.numericCode === id).map((item, index) => {
           const population = item.population.toLocaleString("pt-br");
@@ -28,7 +32,14 @@ export default function Details() {
           return (
             <section key={index} className="containerDetails">
               <div className="firstDivIntoContainer">
-                <img src={item.flags.svg} alt="Flags" />
+                <img
+                  style={{
+                    boxShadow:
+                      darkMode === "darkMode" ? "0px 0px 0px black" : "",
+                  }}
+                  src={item.flags.svg}
+                  alt="Flags"
+                />
               </div>
               <div className="containerDetailsInfo">
                 <h2>{item.name}</h2>
@@ -74,7 +85,15 @@ export default function Details() {
                     <h3>Border Countries:</h3>
 
                     {item.borders.map((border) => (
-                      <button key={border}>{border}</button>
+                      <button
+                        style={{
+                          backgroundColor:
+                            darkMode === "darkMode" ? "hsl(209, 23%, 22%)" : "",
+                        }}
+                        key={border}
+                      >
+                        {border}
+                      </button>
                     ))}
                   </div>
                 ) : (

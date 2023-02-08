@@ -1,0 +1,30 @@
+.headerAllPage {
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 2rem 0;
+  display: flex;
+  justify-content: space-between;
+}
+.headerAllPage button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: transparent;
+  border: none;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  outline: none;
+}
+
+.headerAllPageDark {
+  background-color: hsl(209, 23%, 22%);
+  color: white;
+}
+.headerAllPageDark button {
+  color: white;
+}
+
+.moonFil {
+  color: white;
+}

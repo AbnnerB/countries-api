@@ -1,18 +1,13 @@
 .footerAllPage {
   height: 20px;
   position: absolute;
-  /* bottom: 0px; */
-  left: 0px;
-  right: 0px;
   width: 100%;
-  background-color: white;
+  background-color: rgba(241, 238, 238, 0.377);
 }
 
 .footerAllPageDark {
   height: 20px;
   position: absolute;
-  left: 0px;
-  right: 0px;
   width: 100%;
   background-color: hsl(207, 26%, 17%);
 }

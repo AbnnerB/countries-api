@@ -2,6 +2,7 @@
   max-width: 80%;
   margin: 0 auto;
   min-height: 100vh;
+  padding-top: 2rem;
 }
 
 .linkBack {
@@ -66,7 +67,8 @@
   border: none;
   background-color: transparent;
   padding: 0.3rem 1rem;
-  box-shadow: 1px -1px 3px rgb(168, 166, 166);
+  box-shadow: 1px 1px 4px rgba(46, 44, 44, 0.493);
+  color: inherit;
 }
 
 .borderCountriesFalse {
