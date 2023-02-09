@@ -9,7 +9,7 @@ import useModeContext from "../../hook/useModeContext";
 import { BsArrowLeftShort } from "react-icons/bs";
 
 export default function Details() {
-  const { darkMode, setDarkMode } = useModeContext();
+  const { darkMode } = useModeContext();
 
   const { id } = useParams();
 

@@ -4,7 +4,9 @@ import "./home.css";
 import { useNavigate } from "react-router-dom";
 import useModeContext from "../../hook/useModeContext";
 import { BsSearch } from "react-icons/bs";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+
+import { RiArrowDownSLine } from "react-icons/ri";
 
 // const top20 = Data.slice(0, 10);
 
@@ -16,15 +18,23 @@ function Home() {
 
   const [valueInputTextSearch, setValueInputTextSearch] = useState("");
   const [valueSelect, setValueSelect] = useState("Americas");
+  const [seeOptions, setSeeOptions] = useState(false);
+  const [seeMessageDefaultFilter, setSeeMessageDefaultFilter] = useState(true);
 
   function linkNavigate(code) {
     navigate(`details/${code}`);
   }
 
+  useEffect(() => {
+    if (valueSelect !== "Americas") {
+      setSeeMessageDefaultFilter(false);
+    }
+  }, [valueSelect]);
+
   return (
     <main className={darkMode} style={{ minHeight: "100vh" }}>
       <div className="headerSearch">
-        <div className="inputAndSearch">
+        <div className="inputAndSearch" onClick={() => setSeeOptions(false)}>
           <label className="search">
             <BsSearch />
           </label>
@@ -36,26 +46,47 @@ function Home() {
             style={{ backgroundColor: darkMode === "darkMode" ? "" : "white" }}
           />
         </div>
-        <select
-          style={{
-            backgroundColor:
-              darkMode === "darkMode" ? "hsl(209, 23%, 22%)" : "",
-            color: darkMode === "darkMode" ? "white" : "hsl(209, 23%, 22%)",
-          }}
-          onClick={(e) => setValueSelect(e.target.value)}
-        >
-          <option defaultValue={"Americas"} disabled>
-            Filter by region
-          </option>
-          <option value={"Africa"}>Africa</option>
-          <option value={"Americas"}>America</option>
-          <option value={"Asia"}>Asia</option>
-          <option value={"Europe"}>Europe</option>
-          <option value={"Oceania"}>Oceania</option>
-        </select>
+
+        <div className="selectFake" onClick={() => setSeeOptions(!seeOptions)}>
+          <div
+            className="titSelect"
+            style={{
+              backgroundColor:
+                darkMode === "darkMode" ? "hsl(209, 23%, 22%)" : "white",
+              color: darkMode === "darkMode" ? "white" : "hsl(209, 23%, 22%)",
+            }}
+          >
+            <span>
+              {seeMessageDefaultFilter
+                ? "Filter by region"
+                : valueSelect === "Americas"
+                ? "America"
+                : valueSelect}
+            </span>
+            <RiArrowDownSLine />
+          </div>
+          <div
+            className={seeOptions ? "optionsVisibilty" : "optionsHidden"}
+            style={{
+              backgroundColor:
+                darkMode === "darkMode" ? "hsl(209, 23%, 22%)" : "white",
+              color: darkMode === "darkMode" ? "white" : "hsl(209, 23%, 22%)",
+            }}
+          >
+            <span onClick={() => setValueSelect("Africa")}>Africa</span>
+            <span onClick={() => setValueSelect("Americas")}>America</span>
+            <span onClick={() => setValueSelect("Asia")}>Asia</span>
+            <span onClick={() => setValueSelect("Europe")}>Europe</span>
+            <span onClick={() => setValueSelect("Oceania")}>Oceania</span>
+          </div>
+        </div>
       </div>
+
       {valueInputTextSearch.length === 0 ? (
-        <section className="containerCountries">
+        <section
+          className="containerCountries"
+          onClick={() => setSeeOptions(false)}
+        >
           {Data.filter((c) => c.region === valueSelect).map((item, index) => {
             const population = item.population.toLocaleString("pt-br");
 
@@ -89,7 +120,10 @@ function Home() {
           })}
         </section>
       ) : (
-        <section className="containerCountries">
+        <section
+          className="containerCountries"
+          onClick={() => setSeeOptions(false)}
+        >
           {Data.filter(
             (country) =>
               country.name.toLowerCase() ===

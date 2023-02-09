@@ -27,15 +27,55 @@
 }
 .headerSearch select {
   padding: 1rem;
-  border-radius: 6px;
+  border-radius: 8px;
   outline: none;
   border: none;
   border-right: 20px solid hsl(209, 23%, 22%);
+  box-shadow: 1px 1px 6px rgb(63, 63, 63);
 }
-.headerSearch select option {
-  border-bottom: 2px solid white;
-  border-radius: 10px;
+
+.selectFake {
+  max-width: 200px;
+  min-width: 200px;
+  position: relative;
+  user-select: none;
 }
+
+.titSelect {
+  cursor: pointer;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 1px 2px 5px rgba(32, 32, 32, 0.123);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: hsl(209, 23%, 22%);
+}
+
+.optionsHidden {
+  max-height: 0px;
+  overflow: hidden;
+}
+
+.optionsVisibilty {
+  position: absolute;
+  width: 100%;
+  box-shadow: 1px 2px 5px rgba(32, 32, 32, 0.123);
+  border-radius: 8px;
+  padding: 0.6rem 0;
+  margin-top: 0.3rem;
+  display: flex;
+  flex-direction: column;
+  background-color: hsl(209, 23%, 22%);
+}
+
+.optionsVisibilty span {
+  cursor: pointer;
+  margin: 3px 0px;
+  padding: 0.2rem 1rem;
+}
+
+/* espaço */
 
 .containerCountries {
   max-width: 80%;
