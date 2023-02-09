@@ -34,18 +34,16 @@
   .headerAllPage h2 {
     font-size: 1.3rem;
   }
-
-  .headerAllPage button {
-    /* flex-direction: column; */
-    justify-content: center;
-    margin: 0;
-    padding: 0;
-    gap: 0rem;
-    font-size: 1rem;
-  }
 }
 @media screen and (max-width: 300px) {
   .headerAllPage h2 {
     font-size: 1rem;
+  }
+  .headerAllPage button {
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    gap: 0rem;
+    font-size: 0.8rem;
   }
 }

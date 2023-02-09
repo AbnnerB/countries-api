@@ -1,8 +1,13 @@
 .footerAllPage {
   height: 20px;
   position: absolute;
+  z-index: 99991000;
   width: 100%;
   background-color: rgba(241, 238, 238, 0.377);
+  color: rgb(255, 255, 255);
+  left: 0px;
+  color: transparent;
+  /* background-color: rgb(160, 160, 160); */
 }
 
 .footerAllPageDark {
@@ -10,4 +15,5 @@
   position: absolute;
   width: 100%;
   background-color: hsl(207, 26%, 17%);
+  color: hsl(207, 26%, 17%);
 }

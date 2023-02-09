@@ -84,17 +84,21 @@ export default function Details() {
                   <div className="bordersCountries">
                     <h3>Border Countries:</h3>
 
-                    {item.borders.map((border) => (
-                      <button
-                        style={{
-                          backgroundColor:
-                            darkMode === "darkMode" ? "hsl(209, 23%, 22%)" : "",
-                        }}
-                        key={border}
-                      >
-                        {border}
-                      </button>
-                    ))}
+                    <div className="containerBorderCountriesButton">
+                      {item.borders.map((border) => (
+                        <button
+                          style={{
+                            backgroundColor:
+                              darkMode === "darkMode"
+                                ? "hsl(209, 23%, 22%)"
+                                : "",
+                          }}
+                          key={border}
+                        >
+                          {border}
+                        </button>
+                      ))}
+                    </div>
                   </div>
                 ) : (
                   <div className="borderCountriesFalse">
