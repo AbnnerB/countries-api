@@ -18,7 +18,7 @@
 
 .headerSearch input {
   background-color: hsl(209, 23%, 22%);
-  padding: 0.8rem 3rem;
+  padding: 1rem 3rem;
   border: none;
   box-shadow: 2px 1px 6px rgb(41, 40, 40);
   outline: none;
@@ -103,4 +103,32 @@
 }
 .card .apiContentInfo {
   padding: 1rem 0 1rem 1rem;
+}
+
+@media screen and (max-width: 640px) {
+  .headerSearch {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .headerSearch {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .headerSearch input {
+    width: 200px;
+    padding: 1rem 1rem 1rem 2.4rem;
+  }
+  .containerCountries {
+    max-width: 80%;
+    /* margin: 2rem auto 0 auto; */
+    display: grid;
+    flex-wrap: wrap;
+    grid-template-columns: 100%;
+    gap: 3rem;
+    padding-bottom: 2rem;
+    justify-content: space-between;
+  }
 }

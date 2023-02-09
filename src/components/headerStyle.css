@@ -4,6 +4,7 @@
   padding: 2rem 0;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .headerAllPage button {
   display: flex;
@@ -27,4 +28,24 @@
 
 .moonFil {
   color: white;
+}
+
+@media screen and (max-width: 400px) {
+  .headerAllPage h2 {
+    font-size: 1.3rem;
+  }
+
+  .headerAllPage button {
+    /* flex-direction: column; */
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    gap: 0rem;
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 300px) {
+  .headerAllPage h2 {
+    font-size: 1rem;
+  }
 }
