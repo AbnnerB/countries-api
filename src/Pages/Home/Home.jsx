@@ -1,16 +1,13 @@
-import Data from "../../Data/data.json";
+import { useEffect, useState } from "react";
 import "./home.css";
+
+import Data from "../../Data/data.json";
 
 import { useNavigate } from "react-router-dom";
 import useModeContext from "../../hook/useModeContext";
+
 import { BsSearch } from "react-icons/bs";
-import { useEffect, useState } from "react";
-
 import { RiArrowDownSLine } from "react-icons/ri";
-
-// const top20 = Data.slice(0, 10);
-
-//brazil into data === line 2047
 
 function Home() {
   const navigate = useNavigate();
@@ -43,7 +40,9 @@ function Home() {
             type="text"
             value={valueInputTextSearch}
             onChange={(e) => setValueInputTextSearch(e.target.value)}
-            style={{ backgroundColor: darkMode === "darkMode" ? "" : "white" }}
+            style={{
+              backgroundColor: darkMode === "darkMode" ? "" : "white",
+            }}
           />
         </div>
 

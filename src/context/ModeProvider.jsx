@@ -12,7 +12,7 @@ export default function ModeProvider({ children }) {
 
   return (
     <ModeContext.Provider value={{ darkMode, setDarkMode }}>
-      {children};
+      {children}
     </ModeContext.Provider>
   );
 }

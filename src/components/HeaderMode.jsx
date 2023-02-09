@@ -14,9 +14,6 @@ export default function HeaderMode() {
     }
   }
 
-  // className={
-  //   darkMode === "lightMode" ? "headerAllPage" : "headerAllPageDark"
-  // }
   return (
     <div
       className={darkMode === "darkMode" ? "headerAllPageDark" : ""}
